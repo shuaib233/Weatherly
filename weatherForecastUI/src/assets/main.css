@@ -1,0 +1,113 @@
+@import './base.css';
+body {
+	color: #060606;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 300;
+	position: relative;
+	letter-spacing: 0.05rem;
+	line-height: 1.5;
+	text-align: center;
+}
+
+.bg-grad
+{
+	background: #e1ecff;
+    background-image: linear-gradient(to left bottom, #d6eef6, #dff0fa, #e7f3fc, #eff6fe, #f6f9ff);
+}
+
+/*----------------
+	Media Queries
+-----------------*/
+@media (min-width: 375px) {
+	.app-container{
+		max-width:95%;
+		margin-left: 0%;
+	}
+}
+@media (min-width: 550px) {
+	/* Current Weather */
+	#current { 
+		font-size: 1.3rem;
+	}
+	.date, #current .conditions { font-size: 0.9em;}
+
+	.conditions-history{
+    font-size: 0.8em;
+    font-family: monospace;
+    font-weight: 500;
+  }
+
+	#current .weatherIcon {
+		font-size: 0.95em;
+		height: 120px;
+		margin: 7% auto 3%;
+		width: 120px;
+	}
+	/* Future Forecast */
+	#future {
+		font-size: 1.1rem;
+		padding: 0;
+		margin-bottom: 3%;
+	}
+	#future > .container {
+		border-bottom: none;
+		float: left;
+		padding: 20px;
+		width: 33.33%; 
+	}
+	#future > .container:first-child { border-top: none; }
+	#future > .container:not(:last-child) { border-right: 1px solid rgba(255,255,255,0.25); }
+	#future .day, #future p { text-align: center; }
+	#future .weatherIcon {
+		font-size: 0.56em;
+		float: none;
+		height: 60px;
+		margin: 10% auto 5%;
+		width: 60px;
+	}
+	footer { font-size: 0.9rem; }
+
+	.app-container{
+		max-width:90%;
+		margin-left: 0%;
+	}
+}
+@media (min-width: 880px) {
+	#current {
+		font-size: 1.5rem;
+	}
+	#current .weatherIcon {
+		font-size: 0.82em;
+		margin: 5% auto 2%;
+	}
+	#lastUpdated {
+		padding: 3%;
+	}
+
+	.app-container{
+		max-width:90%;
+		margin-left: 0%;
+	}
+}
+
+
+ 
+
+
+.high, .low ::after {
+	content: "\00B0";
+}
+
+.temperature::after {
+    content: "\00b0";
+}
+
+.wind :after{
+	content: " m/h";
+}
+
+.app-container{
+	max-width:90%;
+	margin-left: 5%;
+}
+
